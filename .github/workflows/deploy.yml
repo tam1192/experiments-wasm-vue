@@ -39,14 +39,14 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'npm'
+          cache: "npm"
       - run: npm install
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
       - name: Build with vue
         # 要変更
-        run: npx vite build --base=/vue-wasm-app/
+        run: npx vite build --base=/experiments-wasm-vue/
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
